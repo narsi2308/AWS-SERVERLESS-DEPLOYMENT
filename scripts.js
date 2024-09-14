@@ -10,7 +10,7 @@ document.getElementById("savestudent").onclick = function(){
         "age": $('#age').val()
     };
     $.ajax({
-        url: API_ENDPOINT,
+        url: "https://gbiyjb5k76.execute-api.ap-south-1.amazonaws.com/prod",
         type: 'POST',
         data:  JSON.stringify(inputData),
         contentType: 'application/json; charset=utf-8',
@@ -26,7 +26,7 @@ document.getElementById("savestudent").onclick = function(){
 // AJAX GET request to retrieve all students
 document.getElementById("getstudents").onclick = function(){  
     $.ajax({
-        url: API_ENDPOINT,
+        url: "https://gbiyjb5k76.execute-api.ap-south-1.amazonaws.com/prod",
         type: 'GET',
         contentType: 'application/json; charset=utf-8',
         success: function (response) {
